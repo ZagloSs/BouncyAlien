@@ -9,7 +9,7 @@ Bouncy Alien is a fun little infinte game developed for Iphone and Android.
 -Add music and sound effects
 -Add a shop to buy different characters
 -Add some sort of scenario (White pipes are cool but a little bit boring when you've been playing for 
-more than 6 minutes straight, Maybe scneario skins? 😉)
+more than 6 minutes straight, Maybe sceneario skins? 😉)
 
 
 ## Patch Notes
