@@ -8,6 +8,8 @@ public class PipeSpawner : MonoBehaviour
     [SerializeField] private float _maxTime = 1.5f;
     [SerializeField]private GameObject pivotPoint;
      private float _timer;
+    [SerializeField] private float maxBound = 15f;
+    [SerializeField] private float minBound = 9f;
 
     public static PipeSpawner instance;
     private void Awake()
@@ -43,7 +45,7 @@ public class PipeSpawner : MonoBehaviour
         if (pipe) 
         {
             pipe.SetActive(true);
-            pipe.transform.position = new Vector3(Random.Range(8f,15f),transform.position.y,0);
+            pipe.transform.position = new Vector3(Random.Range(minBound,maxBound),transform.position.y,0);
             pipe.transform.rotation = transform.rotation; 
            
         }
