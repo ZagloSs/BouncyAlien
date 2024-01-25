@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField] private float jumpForce;
-    [SerializeField] private float velocidadRotacion;
     [SerializeField] private ParticleSystem ps;
     private Rigidbody2D rb;
 
