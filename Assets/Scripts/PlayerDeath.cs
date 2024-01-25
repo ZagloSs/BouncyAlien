@@ -10,6 +10,12 @@ public class PlayerDeath : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Death"))
         {
+            if(PlayerPrefs.GetInt("bs", 0) < Score.instance.getScore())
+            {
+                PlayerPrefs.SetInt("bs", Score.instance.getScore());
+            }
+
+            GameManager.instance.GameOver();
             Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }

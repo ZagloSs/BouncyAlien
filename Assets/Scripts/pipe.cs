@@ -6,7 +6,7 @@ public class pipe : MonoBehaviour
 {
 
     private float pivotPoint;
-    [SerializeField] private float rotationSpeed = 200f;
+    [SerializeField] private float rotationSpeed;
 
     private Vector3 pivot;
 

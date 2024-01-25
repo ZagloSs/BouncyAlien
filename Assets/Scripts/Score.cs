@@ -34,4 +34,9 @@ public class Score : MonoBehaviour
         score++;
         scoreTxt.text = score.ToString();
     }
+
+    public int getScore()
+    {
+        return score;
+    }
 }
