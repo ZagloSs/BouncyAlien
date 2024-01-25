@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             ps.Play();
             rb.velocity = Vector3.up * jumpForce;
