@@ -10,6 +10,7 @@ public class PipeSpawner : MonoBehaviour
      private float _timer;
     [SerializeField] private float maxBound = 15f;
     [SerializeField] private float minBound = 9f;
+    private bool eventOn = false;
 
     public static PipeSpawner instance;
     private void Awake()
@@ -31,7 +32,7 @@ public class PipeSpawner : MonoBehaviour
     {
         if (_timer > _maxTime)
         {
-            SpawnPipe();
+            if (!eventOn) { SpawnPipe(); }
             _timer = 0;
         }
 
@@ -56,5 +57,10 @@ public class PipeSpawner : MonoBehaviour
         return pivotPoint.transform.position;
     }
 
-    
+    public void ToggleEventOn()
+    {
+        eventOn = !eventOn;
+    }
+
+
 }

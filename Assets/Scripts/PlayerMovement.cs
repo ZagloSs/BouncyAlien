@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float jumpForce;
     [SerializeField] private ParticleSystem ps;
+    [SerializeField] private AudioClip blastEffect;
     private Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -21,9 +22,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            ps.Play();
-            rb.velocity = Vector3.up * jumpForce;
+            jump();
         }
+
+        foreach (Touch toque in Input.touches)
+        {
+            if (toque.phase == TouchPhase.Began)
+            {
+                jump();
+            }
+        }
+    }
+
+    private void jump()
+    {
+        ps.Play();
+        rb.velocity = Vector3.up * jumpForce;
+        AudioManager.instance.PlaySoundEffect(blastEffect);
     }
 
 }

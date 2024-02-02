@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public GameObject eventLaser;
     [SerializeField] private GameObject _gameObjectCanvas;
     private void Awake()
     {
