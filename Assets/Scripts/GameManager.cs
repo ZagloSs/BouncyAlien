@@ -18,6 +18,19 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         _gameObjectCanvas.SetActive(true);
+        
+    }
+
+    //Restart with space when dead
+    private void Update()
+    {
+        if(_gameObjectCanvas.activeSelf) 
+        {
+            if(Input.GetKeyUp(KeyCode.Space))
+            {
+                ReStart();
+            }
+        }
     }
 
     public void ReStart()

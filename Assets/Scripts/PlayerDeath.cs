@@ -23,6 +23,7 @@ public class PlayerDeath : MonoBehaviour
                 bsTxt.SetActive(false);
             }
 
+
             GameManager.instance.GameOver();
             AudioManager.instance.PlaySoundEffect(deathSound);
             Instantiate(explosion, transform.position, transform.rotation);
