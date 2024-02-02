@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public GameObject eventLaser;
     [SerializeField] private GameObject _gameObjectCanvas;
     private void Awake()
     {
@@ -28,4 +28,6 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+
 }

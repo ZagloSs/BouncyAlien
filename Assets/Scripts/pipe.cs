@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class pipe : MonoBehaviour
 {
-
     private float pivotPoint;
     [SerializeField] private float rotationSpeed;
 
     private Vector3 pivot;
+
 
     private void Start()
     {
@@ -27,6 +28,11 @@ public class pipe : MonoBehaviour
             gameObject.SetActive(false);
             
         }
+    }
+
+    public void SpeedUp(float speedUp)
+    {
+        rotationSpeed += speedUp;
     }
 
 

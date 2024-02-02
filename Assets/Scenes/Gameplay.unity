@@ -6719,6 +6719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventLaser: {fileID: 3582140746113072313, guid: da7905fe43bf38741a7ad93b6349d390, type: 3}
   _gameObjectCanvas: {fileID: 1523605471}
+  speedUpTime: 10
 --- !u!4 &2114745198
 Transform:
   m_ObjectHideFlags: 0
