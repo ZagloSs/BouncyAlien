@@ -5487,6 +5487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 558858743165448592, guid: 4d8770395129c8c4fbfa0d0755e8bcc2, type: 3}
+  deathSound: {fileID: 8300000, guid: 09f75dd6a25ce3b4db878d8f02f1e308, type: 3}
   bsTxt: {fileID: 2023027652}
 --- !u!1 &869622349
 GameObject:
@@ -6717,9 +6718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea9d4d790d816349b8e108b60891f01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventLaser: {fileID: 3582140746113072313, guid: da7905fe43bf38741a7ad93b6349d390, type: 3}
   _gameObjectCanvas: {fileID: 1523605471}
-  speedUpTime: 10
 --- !u!4 &2114745198
 Transform:
   m_ObjectHideFlags: 0
