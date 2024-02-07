@@ -5,26 +5,27 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-    private AudioSource audio;
+    private AudioSource aSource;
 
     private void Awake()
     {
-        if (instance == null)
+        if (!instance)
         {
             instance = this;
         }
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        audio = GetComponent<AudioSource>();
+        aSource = GetComponent<AudioSource>();
     }
 
     public void PlaySoundEffect(AudioClip clip)
     {
-        audio.clip = clip;
-        audio.Play();
+        GetComponent<AudioSource>().clip = clip;
+        GetComponent<AudioSource>().Play();
     }
     
 

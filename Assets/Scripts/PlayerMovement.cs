@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -15,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = skinSelected.GetComponent<SpriteRenderer>().sprite;
+        gameObject.GetComponent<SpriteRenderer>().sprite = GameManager.instance.skin;
 
         rb = GetComponent<Rigidbody2D>();
     }

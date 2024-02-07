@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -14,9 +12,10 @@ public class AutoJumpMenu : MonoBehaviour
 
     private void Awake()
     {
-        if(instance == null)
+        if(!instance)
         {
             instance = this;
+            
         }
     }
     // Start is called before the first frame update
@@ -38,13 +37,15 @@ public class AutoJumpMenu : MonoBehaviour
         if(indexSprite == 0)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[sprites.Length-1];
+            
         }
         else
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[indexSprite - 1];
+            
         }
         sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
-        PrefabUtility.SaveAsPrefabAsset(gameObject, "Assets/Prefabs/Skin.prefab");
+        GameManager.instance.skin = sprite;
 
 
     }
@@ -54,12 +55,14 @@ public class AutoJumpMenu : MonoBehaviour
         if (indexSprite + 1 == sprites.Length)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[0];
+            
         }
         else
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[indexSprite + 1];
+            
         }
         sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
-        PrefabUtility.SaveAsPrefabAsset(gameObject, "Assets/Prefabs/Skin.prefab");
+        GameManager.instance.skin = sprite;
     }
 }

@@ -24,7 +24,7 @@ public class PlayerDeath : MonoBehaviour
             }
 
 
-            GameManager.instance.GameOver();
+            CanvasManager.Instance.GameOver();
             AudioManager.instance.PlaySoundEffect(deathSound);
             Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);

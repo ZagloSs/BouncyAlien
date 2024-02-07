@@ -1,35 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.PackageManager;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    [SerializeField] private GameObject _gameObjectCanvas;
+    public Sprite skin;
     private void Awake()
     {
-        if (instance == null)
+        if (!instance)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-    }
-    public void GameOver()
-    {
-        _gameObjectCanvas.SetActive(true);
-        
-    }
-
-    //Restart with space when dead
-    private void Update()
-    {
-        if(_gameObjectCanvas.activeSelf) 
+        else
         {
-            if(Input.GetKeyUp(KeyCode.Space))
-            {
-                ReStart();
-            }
+            Destroy(gameObject);
         }
     }
 
