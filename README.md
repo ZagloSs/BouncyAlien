@@ -2,7 +2,7 @@
 ![bouncy alien banner, developed by ZagloSs](https://raw.githubusercontent.com/ZagloSs/BouncyAlien/main/forgit/banner.jpg)
 # Bouncy Alien	
 Bouncy Alien is a fun little infinte game developed for Iphone and Android.\
-**Current Version: 0.8** 
+**Current Version: 0.8.5** 
 
 ## What's On the Chamber?
 -New events(only dodging white pipes is a little boring).\
@@ -14,6 +14,9 @@ more than 6 minutes straight, Maybe scneario skins? 😉).
 
 
 ## Patch Notes
+**Version 0.8.5**\
+-Added character selection (Possibly changing it to unlockeables)
+
 **Version 0.8**\
 -Improved Gravity.\
 -Improved Pipe Spawning.\
