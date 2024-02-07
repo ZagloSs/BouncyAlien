@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class AutoJumpMenu : MonoBehaviour
@@ -43,6 +44,7 @@ public class AutoJumpMenu : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[indexSprite - 1];
         }
         sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+        PrefabUtility.SaveAsPrefabAsset(gameObject, "Assets/Prefabs/Skin.prefab");
 
 
     }
@@ -58,5 +60,6 @@ public class AutoJumpMenu : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = sprites[indexSprite + 1];
         }
         sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+        PrefabUtility.SaveAsPrefabAsset(gameObject, "Assets/Prefabs/Skin.prefab");
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,12 +9,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private ParticleSystem ps;
     [SerializeField] private AudioClip blastEffect;
+    [SerializeField] private GameObject skinSelected;
     private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.GetComponent<SpriteRenderer>().sprite = skinSelected.GetComponent<SpriteRenderer>().sprite;
+
         rb = GetComponent<Rigidbody2D>();
     }
 
