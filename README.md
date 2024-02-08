@@ -2,8 +2,9 @@
 ![bouncy alien banner, developed by ZagloSs](https://raw.githubusercontent.com/ZagloSs/BouncyAlien/main/forgit/banner.jpg)
 # Bouncy Alien	
 Bouncy Alien is a fun little infinte game developed for Iphone and Android.\
-[Download the Unity project here](https://github.com/ZagloSs/BouncyAlien/archive/refs/heads/main.zip)\
 **Current Version: 0.8.5** 
+
+[Download the Unity project here](https://github.com/ZagloSs/BouncyAlien/archive/refs/heads/main.zip)\
 
 ## What's On the Chamber?
 -New events(only dodging white pipes is a little boring).\
