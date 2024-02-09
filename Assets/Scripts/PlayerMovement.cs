@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        transform.position = new Vector3 (transform.position.x, GameManager.instance.playerPos, transform.position.z);
         gameObject.GetComponent<SpriteRenderer>().sprite = GameManager.instance.skin;
 
         rb = GetComponent<Rigidbody2D>();

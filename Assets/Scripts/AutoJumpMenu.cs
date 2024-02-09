@@ -22,6 +22,7 @@ public class AutoJumpMenu : MonoBehaviour
     void Start()
     {
         sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+        GameManager.instance.skin = sprite;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -29,6 +30,11 @@ public class AutoJumpMenu : MonoBehaviour
     {
         ps.Play();
         rb.velocity = Vector3.up * 12f;
+    }
+
+    public float GetPos()
+    {
+        return transform.position.y;
     }
 
     public void changeSkinLeft()

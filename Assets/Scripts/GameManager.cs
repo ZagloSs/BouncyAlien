@@ -6,16 +6,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public Sprite skin;
+    public float playerPos;
     private void Awake()
     {
         if (!instance)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
         }
     }
 
